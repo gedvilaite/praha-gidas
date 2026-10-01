@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #e8dcc0;
+  color: #3c2917;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.guide {
+  width: 100%;
+  max-width: 810px;
+  margin: 0 auto;
+}
+
+.page {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+.page img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 810 / 1440;
+  object-fit: contain;
+  object-position: center top;
+  vertical-align: top;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.hotspot {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  left: var(--x);
+  width: var(--w);
+  top: calc(var(--y) + var(--h) / 2);
+  height: max(var(--h), 28px);
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font-size: 0;
+  text-decoration: none;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.hotspot:focus {
+  outline: none;
+}
+
+.hotspot:focus-visible {
+  outline: 2px solid #c4a574;
+  outline-offset: 1px;
+  background: rgba(196, 165, 116, 0.18);
+}
+
+.pdf-download-wrap {
+  max-width: 810px;
+  margin: 0 auto;
+  background: #3c2917;
+  text-align: center;
+  padding: 14px 16px 28px;
+}
+
+.pdf-download {
+  display: inline-block;
+  color: #d9cbb4;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.pdf-download:hover,
+.pdf-download:focus-visible {
+  opacity: 1;
+  text-decoration: underline;
+  outline: none;
+}
